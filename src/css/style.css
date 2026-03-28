@@ -4,8 +4,32 @@ body {
     background-color: var(--background-color);
 }
 
+.header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* border: 1px solid red; */
+    top: 10vh;
+     animation: floatBlink 3s ease-in-out infinite;
+}
+
+.header p {
+    color: #00bcd4;
+}
+
+.header a {
+    text-decoration: none;
+    color: #53FFAB;
+}
+
+.header a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #00bcd4;
+}
+
 .card {
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -25,7 +49,7 @@ body {
     color: var(--advice-dice-color);
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 30px;
 }
 
@@ -49,4 +73,19 @@ body {
     color: #53FFAB;
     cursor: pointer;
     box-shadow: 0 5px 25px var(--advice-dice-color);
+}
+
+@keyframes floatBlink {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-7px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
