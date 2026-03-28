@@ -12,7 +12,7 @@ async function traduzirTexto(texto) {
 async function getAdvice() {
     const response = await fetch("https://api.adviceslip.com/advice");
     const adviceContent = await response.json();
-    const adviceId = `Conselho ${adviceContent.slip.id}`;
+    const adviceId = `YZ-Conselho ${adviceContent.slip.id}`;
     const adviceText = `${adviceContent.slip.advice}`;
 
     const textoTraduzido = await traduzirTexto(adviceText);
